@@ -1,0 +1,12 @@
+{
+  "name": "neuDevDesktop",
+  "version": "0.0.1",
+  "main": "code/index.js",
+  "author": "aj",
+  "license": "MIT",
+  "scripts": {
+    "neu:dev": "neu run --frontend-lib-dev",
+    "neu:run": "neu run",
+    "neu:build": "neu build"
+  }
+}
