@@ -8,5 +8,8 @@
     "neu:dev": "neu run --frontend-lib-dev",
     "neu:run": "neu run",
     "neu:build": "neu build"
+  },
+  "devDependencies": {
+    "@neutralinojs/neu": "^9.4.0"
   }
 }

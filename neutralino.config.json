@@ -75,7 +75,7 @@
     "binaryName": "neuDevDesktop",
     "resourcesPath": "/resources/dist",
     "extensionsPath": "/extensions/",
-    "clientLibrary": "/resources/dist/neutralino.js",
+    "clientLibrary": "/uiCode/public/neutralino.js",
     "binaryVersion": "4.9.0",
     "clientVersion": "3.8.0",
     "frontendLibrary": {
