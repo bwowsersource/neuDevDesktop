@@ -1,0 +1,14 @@
+{
+  "name": "webtty",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "node-pty": "^0.10.1",
+    "pkg": "^5.8.0",
+    "ws": "^8.12.0"
+  },
+  "scripts": {
+    "pkg": "pkg index.js --out-path dist"
+  }
+}
