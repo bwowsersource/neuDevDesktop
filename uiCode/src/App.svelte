@@ -1,9 +1,12 @@
 <script>
   import svelteLogo from "./assets/svelte.svg";
-  import Stdin from "./lib/stdin.svelte";
-  import LogLines from "./lib/LogLines.svelte";
-  // @ts-ignore
-  window.Neutralino.init(); // Add this function call
+  import Stdin from "./components/Stdin.svelte";
+  import LogLines from "./components/LogLines.svelte";
+  import { neu } from "./libs/neu.js";
+  import Sidebar from "./components/Sidebar.svelte";
+    import Pagebar from "./components/Pagebar.svelte";
+
+  neu.init(); // Add this function call
 
   let history = [];
   function pushToHistory(procLines) {
@@ -12,15 +15,16 @@
 </script>
 
 <main class="window">
+  <Pagebar/>
   <div class="stream">
     <Stdin onComplete={pushToHistory} />
     <div class="logScroll">
       {#each history as procLines}
-      <LogLines printlines={procLines} />
+        <LogLines printlines={procLines} />
       {/each}
     </div>
   </div>
-  <div class="sidebar" />
+  <Sidebar />
 </main>
 
 <style>
@@ -40,14 +44,7 @@
     align-content: flex-start;
   }
 
-  .sidebar {
-    display: flex;
-    background-color: blueviolet;
-    flex-direction: column;
-    flex-grow: 1; /* default 0 */
-    min-width: 200px;
-  }
-  .logScroll{
+  .logScroll {
     display: flex;
     overflow: auto;
     flex-direction: column-reverse;

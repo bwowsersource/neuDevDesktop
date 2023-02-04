@@ -1,8 +1,8 @@
 import './app.css'
 // @ts-ignore
 import App from './App.svelte';
+import authInfo from '../../.tmp/auth_info.json';
 
-import authInfo from '../../.tmp/auth_info.json'
 
 if (import.meta.env.DEV) {
   const { accessToken, port } = authInfo

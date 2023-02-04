@@ -1,6 +1,7 @@
 <script>
   // @ts-nocheck
   import LogLines from "./LogLines.svelte";
+  import { getSession } from "../libs/shellSession";
 
   let printlines = [];
   let exitCode = null; // not exited yet
@@ -60,7 +61,7 @@
   async function exec() {
     const cmdField = document.getElementById("input");
     const cmd = cmdField.value;
-    console.log(cmd);
+    const shellConnection = await getSession();
     // await Neutralino.os.execCommand(cmd, { background: true });
 
     if (childProc) {
